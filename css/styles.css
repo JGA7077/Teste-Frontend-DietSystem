@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Configurações Gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0 5%;
+    counter-reset: mynum;
+}
+
+section {
+    margin: 50px 0;
+}
+
+.title_section {
+    color: #464545;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: start;
+}
+
+label {
+    color: #727171;
+}
+
+/* Responsividade */
+
+@media screen and ( min-width: 320px ) {
+
+    /* Configurações Gerais */
+
+    .title_section {
+        text-align: center;
+    }
+
+    /* Seção de Informações Básicas */
+
+    .basics_info {
+        border-radius: 20px;
+        box-shadow: 0 10px 30px 4px hsla(0,0%,8%,.15), 0 8px 9px -5px hsla(0,0%,8%,.06);
+        padding: 30px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: center;
+    }
+
+
+    input[type="text"], input[type="number"], #food_description {
+        height: 30px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        background-color: #e6e6e6;
+        border: none;
+        text-align: center;
+        color: orangered;
+    }
+
+    input[type=number] { 
+       -moz-appearance: textfield;
+       appearance: textfield;
+    }
+
+    .div_infoTexts {
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .div_description textarea {
+        resize: none;
+    }
+
+    .text_middle {
+        flex-direction: column;
+    }
+
+    /* Seção de Ingredientes */
+
+    .container_ingredients {
+        border-radius: 20px;
+        box-shadow: 0 10px 30px 4px hsla(0,0%,8%,.15), 0 8px 9px -5px hsla(0,0%,8%,.06);
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .ingredients_info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div_ingredients input {
+        margin: 3px;
+        max-width: 100px;
+    }
+
+    .div_ingredients input[type="number"] {
+        text-align: center;
+    }
+
+    .div_ingredients {
+        display: flex;
+        justify-content: center;
+    }
+
+    #ingredient_Weight {
+        max-width: 50px;
+    }
+
+    .ingredients_values {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .ingredients_values div {
+        margin: 0 10px;
+    }
+
+    .ingredients_values {
+        font-size: 0.8rem;
+    }
+
+    .bold_font {
+        font-weight: bold;
+    }
+
+    .preparation_method {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Seção de Método de Preparo */
+
+    .preparation_method {
+        border-radius: 20px;
+        box-shadow: 0 10px 30px 4px hsla(0,0%,8%,.15), 0 8px 9px -5px hsla(0,0%,8%,.06);
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .method_input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .numbered:before {
+        content: counter(mynum) " ";
+        counter-increment: mynum;
+        background-color: #e6e6e6;
+        padding: 5.5px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .numbered {
+        margin-bottom: 15px;
+        margin-right: 2px;
+    }
+
+    .list_item {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #method_instruction {
+        min-width: 200px;
+    }
+
+    .delete_method {
+        background-color: #fff;
+        border: none;
+        margin-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    .trash_icon:hover {
+        color: green;
+    }
+
+    .trash_icon:active {
+        color: rgb(0, 73, 0);
+    }
+
+    /* Seção de Porções e Informações de Nutrientes */
+
+    .general_infos {
+        display: flex;
+        flex-direction: column;
+        margin-top: -25px;
+    }
+
+    .portions, .container_nutrients {
+        border-radius: 20px;
+        box-shadow: 0 10px 30px 4px hsla(0,0%,8%,.15), 0 8px 9px -5px hsla(0,0%,8%,.06);
+        padding: 30px 20px;
+        display: flex;
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    .portions {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portions input {
+        width: 95%;
+    }
+
+    .toggler_icon:hover {
+        color: green;
+    }
+
+    .toggler_icon:active {
+        color: rgb(0, 73, 0);
+    }
+
+    .div_Micronutrients {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+    }
+
+    #first_nutrient {
+        padding: 5px;
+    }
+
+    .nutrients {
+        background-color: #e6e6e6;
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+}
+
+@media screen and ( min-width: 550px ) {
+
+    /* Seção Método de Preparo */
+
+    #method_instruction {
+        width: 70vw;
+    }
+}
+
+@media screen and ( min-width: 768px ) {
+
+    /* Seção de Informações Básicas */
+
+    .basics_info {
+        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card_Food {
+        margin: 0 auto;
+    }
+
+    /* Seção de Ingredientes */
+
+    .ingredients_info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ingredients_icons {
+        text-align: end;
+        margin-top: 10px;
+    }
+
+    /* Seção de Porções e Informações de Nutrientes */
+
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "nutrients nutrients";
+        grid-column-gap: 10px;
+    }
+
+    .nutrients {
+        grid-area: "nutrients";
+    }
+
+}
+
+@media ( min-width: 1020px ) {
+
+    /* Configurações Gerais */
+
+    .title_section {
+        text-align: start;
+    }
+
+    /* Seção de Informações Básicas */
+    
+    .basics_info {
+        text-align: start;
+    }
+
+    .div_infoTexts {
+        min-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .container_infoTexts {
+        width: 90%;
+    }
+
+    .div_description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text_middle {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "text textMiddle text";
+        align-items: center;
+    }
+
+    .text {
+        grid-area: "text";
+    }
+
+    .div_foodWeight {
+        grid-area: "textMiddle";
+    }
+
+    #food_time, #food_portions {
+        width: 140px;
+        display: inline;
+    }
+
+    .div_foodWeight {
+        text-align: center;
+    }
+
+    .div_foodPortions {
+        text-align: end;
+    }
+
+    #food_weightNum {
+        width: 70px;
+        display: inline;
+    }
+
+    #food_weight {
+        width: 100px;
+        display: inline;
+    }
+
+    .food_Photo {
+        border-radius: 75px;
+        padding: 10px;
+        background-color: #e6e6e6;
+    }
+
+    /* Seção de Ingredientes */
+
+    .div_ingredients input {
+        max-width: 250px;
+    }
+
+    /* Seção de Método de Preparo */
+
+    #method_instruction {
+        width: 80vw;
+    }
+
+    /* Seção de Porções e Informações de Nutrientes */
+
+    .nutri_title {
+        text-align: center;
+    }
+
+    .general_infos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .portions, .container_nutrients {
+        width: 43vw;
+    }
+
+    .portions {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div_portionsName input {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .div_portionsName {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .portion_nameText {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .portions_values {
+        text-align: start;
+    }
+
+    .portions_values input {
+        text-align: start;
+        margin: 20px 0;
+    }
+
+}
+

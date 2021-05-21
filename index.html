@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Receita</title>
+
+</head>
+
+<body>
+
+    <section class="basics_info">
+
+        <form>
+
+            <h3 class="title_section">Informação Básicas</h3>
+
+            <div class="container_infoTexts">
+
+                <div class="div_infoTexts">
+
+                    <label for="food_Name">Nome</label>
+                    <input type="text" name="food_Name" id="food_Name">
+
+                </div>
+
+                <div class="div_infoTexts div_description">
+                    
+                    <label for="food_description">Descrição</label>
+                    <textarea id="food_description" oninput="changeDescription()"></textarea>
+
+                </div>
+
+                <div class="div_infoTexts text_middle">
+                    
+                    <div class="text">
+
+                        <div class="text_column">
+                            
+                            <label for="food_time">Tempo de Preparo</label>
+                            <input type="number" class="food_timeInput" name="food_time" id="food_time" onfocus="timeMask()">
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="text">
+
+                        <div class="text_column div_foodWeight">
+                            
+                            <label for="food_weight">Peso total da Receita</label>
+                            <div class="foodValues">
+
+                                <input type="number" name="food_weight" id="food_weightNum" onchange="getPortionWeight()">
+                                <input type="text" value="gramas" name="food_weight" id="food_weight" >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="text">
+
+                        <div class="text_column div_foodPortions">
+                            
+                            <label for="food_portions">Número de Porções</label>
+                            <input type="number" name="food_portions" id="food_portions" onchange="getPortionWeight()">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="div_infoTexts">
+                    
+                    <label for="food_category">Categoria</label>
+                    <input type="text" name="food_category" id="food_category">
+
+                </div>
+            </div>
+        </form>
+        <div class="card_Food">
+
+            <figure>
+                <img src="assets/images/sandwich.png" width="150px" class="food_Photo" alt="Foto da receita">
+            </figure>
+
+        </div>
+        </div>
+    </section>
+
+    <section class="container_ingredients">
+
+        <div class="ingredients_info">
+
+            <form>
+    
+                <h3 class="title_section">Ingredientes</h3>
+    
+                <div class="form_ingredients">
+    
+                    <div class="div_ingredients">
+    
+                        <input type="text" name="ingredient_Name" id="ingredient_Name" placeholder="Ingrediente">
+                        <input type="text" name="ingredient_Portion" id="ingredient_Portion" placeholder="Porção">
+                        <input type="number" name="ingredient_Weight" id="ingredient_Weight" placeholder="Peso">
+    
+                    </div>
+    
+                    <div class="div_ingredients">
+    
+                        <input type="text" name="ingredient_Name" id="ingredient_Name" placeholder="Ingrediente">
+                        <input type="text" name="ingredient_Portion" id="ingredient_Portion" placeholder="Porção">
+                        <input type="number" name="ingredient_Weight" id="ingredient_Weight" placeholder="Peso">
+    
+                    </div>
+    
+                    <div class="div_ingredients">
+    
+                        <input type="text" name="ingredient_Name" id="ingredient_Name" placeholder="Ingrediente">
+                        <input type="text" name="ingredient_Portion" id="ingredient_Portion" placeholder="Porção">
+                        <input type="number" name="ingredient_Weight" id="ingredient_Weight" placeholder="Peso">
+    
+                    </div>
+    
+                    <div class="div_ingredients">
+    
+                        <input type="text" name="ingredient_Name" id="ingredient_Name" placeholder="Ingrediente">
+                        <input type="text" name="ingredient_Portion" id="ingredient_Portion" placeholder="Porção">
+                        <input type="number" name="ingredient_Weight" id="ingredient_Weight" placeholder="Peso">
+    
+                    </div>
+    
+                    <div class="div_ingredients">
+    
+                        <input type="text" name="ingredient_Name" id="ingredient_Name" placeholder="Ingrediente">
+                        <input type="text" name="ingredient_Portion" id="ingredient_Portion" placeholder="Porção">
+                        <input type="number" name="ingredient_Weight" id="ingredient_Weight" placeholder="Peso">
+    
+                    </div>
+    
+                    <div class="div_ingredients">
+    
+                        <input type="text" name="ingredient_Name" id="ingredient_Name" placeholder="Ingrediente">
+                        <input type="text" name="ingredient_Portion" id="ingredient_Portion" placeholder="Porção">
+                        <input type="number" name="ingredient_Weight" id="ingredient_Weight" placeholder="Peso">
+    
+                    </div>
+    
+                    
+                </div>
+        
+            </form>
+
+            <div class="ingredients_values">
+    
+                <div class="proteinas">
+                    <span class="bold_font">33.6</span>
+                    <p class="">Proteínas (g)</p>
+                </div>
+    
+                <div class="carboidratos">
+                    <span class="bold_font">7</span>
+                    <p class="">Carboidratos (g)</p>
+                </div>
+    
+                <div class="lipideos">
+                    <span class="bold_font">7.7</span>
+                    <p class="">Lipídeos (g)</p>
+                </div>
+    
+                <div class="proteinas">
+                    <span class="bold_font">238.1</span>
+                    <span>kcal</span>
+                    <p class="bold_font">100.0%</p>
+                </div>
+    
+            </div>
+
+        </div>
+        
+
+        <div class="ingredients_icons">
+
+            <i class="fas fa-edit ingredients_icons"></i>
+            <i class="fas fa-carrot ingredients_icons"></i>
+
+        </div>
+        
+    </section>
+
+    <section class="preparation_method">
+
+        <form>
+
+            <h3 class="title_section">Método de Preparo</h3>
+
+            <div class="container_method">
+
+                <div class="method_input">
+
+                    <div class="list_item">
+
+                        <p class="numbered"></p>
+
+                        <input type="text" name="method_instruction" id="method_instruction" onfocus="addMethod()">
+
+                        <button type="button" class="delete_method" onclick="deleteMethod()" id="indexButton">
+            
+                            <i class="fas fa-trash trash_icon"></i>
+
+                        </button>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+    
+        </form>
+
+    </section>
+
+    <section class="general_infos">
+
+        <div class="portions">
+
+            <form>
+
+                <h3 class="title_section">Porção e medidas caseiras</h3>
+
+                <div class="div_portionsName">
+
+                    <div class="portion_nameText">
+
+                        <label for="portion_name">Nome da porção</label>
+                        <input type="text" value="Porção" name="portion_name" id="portion_name" onchange="portionName()">
+
+                    </div>
+    
+                    <div class="portion_nameText">
+
+                        <label for="portion_pluralName">Nome da porção no plural</label>
+                        <input type="text" value="Porções" name="portion_pluralName" id="portion_pluralName">
+
+                    </div>
+
+                </div>
+
+                <div class="portions_values">
+
+                    <label for="portion_qtd">Número de porções</label>
+                    <input type="text" value="0" name="portion_qtd" id="portion_qtd">
+    
+                    <label for="portion_weight">Peso de cada porção</label>
+                    <input type="text" value="0" name="portion_weight" id="portion_weight">
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="container_nutrients">
+
+            <div class="div_Micronutrients">
+
+                <h3 class="title_section nutri_title"><span><i class="fas fa-exchange-alt toggler_icon"></i></span>  Micronutrientes por <span class="nutrients_qtd"></span></h3>
+
+                <div class="columns">
+                    
+                    <div class="first_column">
+
+                        <p class="nutrients first_column" id="first_nutrient">
+
+                            <span class="nutrient_name">
+                                Vitamina A
+                            </span>
+                            <span class="nutrient_value">
+                                50mg
+                            </span>
+        
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+
+                    </div>
+
+                    <div class="second_column">
+
+                        <p class="nutrients first_column">
+
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+        
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+        
+                        <p class="nutrients first_column">
+        
+                            <span class="nutrient_name"></span>
+                            <span class="nutrient_value"></span>
+                            
+                        </p>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+            <!-- <div class="div_Macronutrients">
+
+                <i class="fas fa-exchange-alt toggler_icon"></i>
+                <h3 class="title_section nutri_title">Macronutrientes por </h3>
+
+                <p class="nutrients">
+
+                    <span class="nutrient_name">Carboidratos</span>
+                    <span class="nutrient_value">10g</span>
+                    
+                </p>
+
+                <p class="nutrients">
+
+                    <span class="nutrient_name">proteínas</span>
+                    <span class="nutrient_value">20g</span>
+                    
+                </p>
+
+                <p class="nutrients">
+
+                    <span class="nutrient_name">Lipídeos</span>
+                    <span class="nutrient_value"></span>
+                    
+                </p>
+
+                <p class="nutrients">
+
+                    <span class="nutrient_name">Calorias</span>
+                    <span class="nutrient_value"></span>
+                    
+                </p>
+
+            </div> -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Scripts de FontsAwesome -->
+    <script src="https://kit.fontawesome.com/5e58f47c63.js" crossorigin="anonymous"></script>
+    <!-- Scripts da Pagina Informações Pessoais -->
+    <script src="../javascript/script.js"></script>
+
+</body>
+
+</html>
